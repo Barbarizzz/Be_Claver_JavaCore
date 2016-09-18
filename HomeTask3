@@ -27,7 +27,7 @@ public abstract class Developer
 
 public class JavaDeveloper extends Developer
 {
-    public String name="Mike";
+    public String name="Hike";
 
    @Override
     public void Skils()
