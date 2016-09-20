@@ -1,0 +1,33 @@
+public class ArrayHolder {
+
+    private int[] array = new int[]{};
+    int key = 0;
+
+    //конструктор
+    public ArrayHolder(int[] array) {
+        this.array = array;
+    }
+
+    //Линейный поиск
+    public void lineSearch(int value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                System.out.println(i);
+                return;
+            }
+        }
+        System.out.println("Массив не найден");
+    }
+
+    //Метод инвертирования
+    public void revers() {
+
+        for (int i = array.length - 1; i >= 0; i--) {
+
+            System.out.print(array[i] + "  ");
+        }
+
+    }
+
+
+}
