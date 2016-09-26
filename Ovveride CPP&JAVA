@@ -1,0 +1,85 @@
+//Интерфейс в котором реализована 2 метода
+public interface Developer {
+
+    public void writeCode();
+
+    public void drinkCoffe();
+
+}
+
+//Джава разработчик наследует интерфейс розработчик
+public class JavaDevelopers implements Developer {
+
+    private String name;
+
+    public JavaDevelopers() {
+    }
+
+    public JavaDevelopers(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void writeCode() {
+        System.out.println(name+" Разработчик Java пишет код ");
+    }
+
+    @Override
+    public void drinkCoffe() {
+        System.out.println(name +" Разработчик Java пьет кофе ");
+    }
+}
+
+//С++ разработчик наследует интерфейс розработчик
+public class CppDeveloper implements Developer {
+
+   private String name;
+
+    public CppDeveloper() {
+    }
+
+    public CppDeveloper(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void writeCode() {
+        System.out.println(name + " Разработчик C++ пишет код ");
+    }
+
+    @Override
+    public void drinkCoffe() {
+        System.out.println(name + " Разработчик C++ пишет код ");
+    }
+}
+
+public class Demo {
+
+    public static void main(String[] args) {
+        CppDeveloper cppDeveloper=new CppDeveloper();
+        cppDeveloper.setName("Mike");
+        cppDeveloper.drinkCoffe();
+        cppDeveloper.writeCode();
+
+        JavaDevelopers javaDevelopers=new JavaDevelopers();
+        javaDevelopers.setName("Johnny");
+        javaDevelopers.drinkCoffe();
+        javaDevelopers.writeCode();
+    }
+}
